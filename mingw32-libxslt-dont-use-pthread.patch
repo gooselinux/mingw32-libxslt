@@ -1,0 +1,15 @@
+--- libxslt-1.1.25/configure.in.orig	2009-09-17 19:41:13.219723199 +0200
++++ libxslt-1.1.25/configure.in	2009-09-17 19:41:22.887973276 +0200
+@@ -137,12 +137,6 @@
+ 
+ dnl Look for pthread.h, needed for testThreads
+ THREAD_LIBS=""
+-AC_CHECK_HEADER(pthread.h,
+-    AC_CHECK_LIB(pthread, pthread_join,[
+-       AC_DEFINE([HAVE_LIBPTHREAD], [], [Define if pthread library is there (-lpthread)])
+-       AC_DEFINE([HAVE_PTHREAD_H], [], [Define if <pthread.h> is there])
+-       THREAD_LIBS="-lpthread"]))
+-
+ AC_SUBST(THREAD_LIBS)
+ 
+ dnl
